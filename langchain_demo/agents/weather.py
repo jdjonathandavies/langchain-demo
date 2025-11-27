@@ -1,4 +1,3 @@
-
 from typing import Any
 from langchain.agents import create_agent
 from langgraph.graph.state import CompiledStateGraph
@@ -11,6 +10,7 @@ def get_weather(city: str) -> str:
     """Get weather for a given city."""
     return f"It's always sunny in {city}!"
 
+
 class WeatherAgent:
     def __init__(self) -> None:
         self.agent: CompiledStateGraph = create_agent(
@@ -18,7 +18,13 @@ class WeatherAgent:
             tools=[get_weather],
             system_prompt="You are a helpful assistant",
         )
-    def get_weather(self, location: str) -> str:
-        response = self.agent.invoke({"messages": [{"role": "user", "content": f"what is the weather in {location}"}]})
-        return response['messages'][-1]
 
+    def get_weather(self, location: str) -> str:
+        response = self.agent.invoke(
+            {
+                "messages": [
+                    {"role": "user", "content": f"what is the weather in {location}"}
+                ]
+            }
+        )
+        return response["messages"][-1]
