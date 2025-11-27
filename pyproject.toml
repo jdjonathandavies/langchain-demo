@@ -12,6 +12,9 @@ dependencies = [
 ]
 
 
+[project.scripts]
+print_hello = "langchain_demo.hello:print_hello"
+
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
