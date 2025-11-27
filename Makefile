@@ -15,7 +15,8 @@ format:
 	poetry run ruff format $(PACKAGE)
 
 lint:
-	poetry run ruff check --fix  $(PACKAGE)
+	poetry run ruff check --fix $(PACKAGE)
+	poetry run mypy $(PACKAGE)
 
 build:
 	docker build -t $(PACKAGE):latest .
