@@ -1,6 +1,6 @@
 
 PACKAGE = langchain_demo
-.PHONY: install clean format lock build run
+.PHONY: install clean format lint lock build run
 
 install:
 	poetry install
@@ -13,6 +13,9 @@ clean:
 
 format:
 	poetry run ruff format $(PACKAGE)
+
+lint:
+	poetry run ruff check --fix  $(PACKAGE)
 
 build:
 	docker build -t $(PACKAGE):latest .

@@ -27,3 +27,13 @@ make run
 ```bash
 curl 127.0.0.1:8080
 ```
+
+# Development
+```bash
+make format
+```
+
+```bash
+make lint
+```
+
