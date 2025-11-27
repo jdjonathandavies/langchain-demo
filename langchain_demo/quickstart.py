@@ -5,7 +5,7 @@ def get_weather(city: str) -> str:
     return f"It's always sunny in {city}!"
 
 agent = create_agent(
-    model="claude-sonnet-4-5-20250929",
+    model="google_genai:gemini-2.5-flash-lite",
     tools=[get_weather],
     system_prompt="You are a helpful assistant",
 )

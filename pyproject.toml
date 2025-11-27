@@ -6,11 +6,10 @@ authors = [
     {name = "Jonathan Davies"}
 ]
 readme = "README.md"
-requires-python = "=3.14"
+requires-python = ">=3.13,<3.14"
 dependencies = [
-    "langchain (>=1.1.0,<2.0.0)"
+    "langchain[google-genai] (>=1.1.0,<2.0.0)"
 ]
-
 
 [project.scripts]
 print_hello = "langchain_demo.hello:print_hello"
