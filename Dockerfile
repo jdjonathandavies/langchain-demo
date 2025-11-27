@@ -4,6 +4,7 @@ RUN pip install poetry
 
 WORKDIR /langchain-demo/
 
+COPY .env /langchain-demo/
 COPY langchain_demo /langchain-demo/langchain_demo/
 COPY poetry.lock /langchain-demo/
 COPY pyproject.toml /langchain-demo/
