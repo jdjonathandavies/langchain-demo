@@ -1,4 +1,6 @@
-.PHONY: install clean lock build run
+
+PACKAGE = langchain_demo
+.PHONY: install clean format lock build run
 
 install:
 	poetry install
@@ -9,8 +11,11 @@ lock:
 clean:
 	poetry env remove --all
 
+format:
+	poetry run ruff format $(PACKAGE)
+
 build:
-	docker build -t langchain_demo:latest .
+	docker build -t $(PACKAGE):latest .
 
 run:
-	docker run -i -p 8080:5000 langchain_demo:latest
+	docker run -i -p 8080:5000 $(PACKAGE):latest

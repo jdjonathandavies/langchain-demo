@@ -11,10 +11,15 @@ dependencies = [
     "langchain[google-genai] (>=1.1.0,<2.0.0)",
     "python-dotenv (>=1.2.1,<2.0.0)",
     "flask (>=3.1.2,<4.0.0)",
+    "ruff (>=0.14.6,<0.15.0)",
 ]
 
 [project.scripts]
 print_hello = "langchain_demo.hello:print_hello"
+
+[tool.ruff]
+line-length = 80
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
