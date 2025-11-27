@@ -2,9 +2,7 @@
 name = "langchain-demo"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Jonathan Davies"}
-]
+authors = [{ name = "Jonathan Davies" }]
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
 dependencies = [
@@ -13,16 +11,13 @@ dependencies = [
     "flask (>=3.1.2,<4.0.0)",
     "ruff (>=0.14.6,<0.15.0)",
 ]
-
-[project.scripts]
-print_hello = "langchain_demo.hello:print_hello"
+scripts = {print_hello = "langchain_demo.hello:print_hello"}
 
 [tool.ruff]
 line-length = 88
 indent-width = 4
 
 [tool.ruff.lint]
-
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
 # Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
 # McCabe complexity (`C901`) by default.
@@ -32,8 +27,8 @@ ignore = []
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
-[tool.ruff.format]
 
+[tool.ruff.format]
 # Like Black, use double quotes for strings.
 quote-style = "double"
 
@@ -61,7 +56,7 @@ docstring-code-format = false
 docstring-code-line-length = "dynamic"
 
 [tool.ruff.lint.pydocstyle]
-convention = "google"  # Accepts: "google", "numpy", or "pep257".
+convention = "google" # Accepts: "google", "numpy", or "pep257".
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
