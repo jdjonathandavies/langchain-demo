@@ -1,0 +1,1 @@
+MODEL_NAME = "google_genai:gemini-2.5-flash-lite"

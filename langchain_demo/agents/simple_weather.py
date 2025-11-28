@@ -1,8 +1,9 @@
-from typing import Any
 
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langgraph.graph.state import CompiledStateGraph
+
+from langchain_demo.config import MODEL_NAME
 
 load_dotenv()
 
@@ -15,7 +16,7 @@ def get_weather(city: str) -> str:
 class WeatherAgent:
     def __init__(self) -> None:
         self.agent: CompiledStateGraph = create_agent(
-            model="google_genai:gemini-2.5-flash-lite",
+            model=MODEL_NAME,
             tools=[get_weather],
             system_prompt="You are a helpful assistant",
         )

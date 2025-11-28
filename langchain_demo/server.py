@@ -2,7 +2,7 @@ from logging import getLogger
 
 from flask import Flask
 
-from langchain_demo.agents.weather import WeatherAgent
+from langchain_demo.agents.simple_weather import WeatherAgent
 
 LOGGER = getLogger(__name__)
 AGENT = WeatherAgent()
