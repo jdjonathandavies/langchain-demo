@@ -12,6 +12,7 @@ clean:
 	poetry env remove --all
 
 format:
+	poetry run ruff check --select I --fix $(PACKAGE)
 	poetry run ruff format $(PACKAGE)
 
 lint:
