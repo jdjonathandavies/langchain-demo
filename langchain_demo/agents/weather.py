@@ -1,7 +1,8 @@
 from typing import Any
+
+from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langgraph.graph.state import CompiledStateGraph
-from dotenv import load_dotenv
 
 load_dotenv()
 
